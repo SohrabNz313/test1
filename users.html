@@ -48,7 +48,7 @@
 <section id="top_action_section" class="row m-b-0 container">
     <!-- ------add Button---------------- -->
     <div class="p-l-10 p-r-10 p-t-10 col s12 m3 l2">
-        <button class="waves-effect waves-light btn blue darken-2 p-l-30 p-r-30 w-full rounded_pill flex-c">
+        <button id="add_user_button" class="waves-effect waves-light btn blue darken-2 p-l-30 p-r-30 w-full rounded_pill flex-c">
             <i class="material-icons m-r-5">add</i>
             Add User
         </button>
@@ -227,9 +227,64 @@
 </section>
 
 
+<div class="add_user_modal_back dis-none"></div>
+<div class="add_user_modal container rounded_top_30 trans-0-3">
+  <div class="row p-t-10 p-b-10 p-l-40 p-r-40 center-on-small-only">
+
+    <h5>
+      <i class="material-icons m-r-10 m-l-10 pos-relative top-4">person_add</i>
+    Add User
+    </h5>
+
+
+   <form>
+     <div class="input_field col s12">
+       <input id="name" type="text" class="validate"/>
+       <label for="name">name:</label>
+     </div>
+     <div class="input_field col s12">
+       <input id="username" type="text" class="validate"/>
+       <label for="username">username:</label>
+     </div>
+     <div class="input_field col s12">
+       <input id="email" type="email" class="validate"/>
+       <label for="email">email:</label>
+     </div>
+
+     <button
+       type="button"
+       class="waves-effect waves-light btn blue darken-1 m-t-20 m-b-10 w-full max-w-250 rounded_pill">
+       submit
+     </button>
+
+
+    </form>
+  </div>
+
+
+</div>
+
+
+
+
+</section>
+
+
+
+
+<section id="test_section" class="grey" x-data="mainData()">
+  111
+  <span x-text="message" class="red"></span>
+  <button class="btn" x-on:click="testFunc()">click</button>
+</section>
+
+
+
+
 <!-- --------------content section -------------------end-------------- -->
 
-
+<script src="assets/js/Alpine.js"></script>
+<script src="assets/js/AlpineJsControllers/maincontroller.js"></script>
 <script src="assets/materialize/js/materialize.min.js"></script>
 <script src="assets/js/app.js"></script>
 <script src="assets/js/users.js"></script>
